@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global dark gradient + smooth scroll */
+:root { color-scheme: dark; }
+html { scroll-behavior: smooth; }
+
+body {
+  @apply bg-gradient-to-br from-gray-900 via-gray-900 to-black text-gray-100 antialiased;
+}
+a { @apply underline-offset-4; }
+.section { @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8; }
+.card {
+  @apply rounded-2xl bg-gray-800/60 backdrop-blur shadow-xl transition-all duration-300;
+}
+.card:hover { @apply shadow-glow translate-y-[-2px]; }
+.badge {
+  @apply inline-flex items-center justify-center px-4 py-2 rounded-xl bg-gray-700 hover:bg-gray-600 transition;
+}
